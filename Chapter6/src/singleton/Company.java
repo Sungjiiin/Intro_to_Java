@@ -6,6 +6,8 @@ public class Company {
 	private Company(){} // 이러면 외부에서는 이걸 함부로 생성X
 	
 	public static Company getInstance() {
+		if(instance == null)
+			instance = new Company();
 		return instance;
 	}
 }
